@@ -1,0 +1,20 @@
+/*
+  Theme Name: Layout Flow
+  Author: Nodo
+  Author URI: https://nodo.pw/
+  Description: Layout Flow
+  Version: 1.0
+*/
+
+@layer reset, base, layout, components, pages, utils;
+
+@import "variables.css";
+
+/* @import "font.css"; */
+@import "modern-normalize" layer(reset);
+@import "base.css" layer(base);
+@import "layout" layer(layout);
+@import "components" layer(components);
+
+/* @import "pages" layer(pages); */
+@import "utilities" layer(utilities);

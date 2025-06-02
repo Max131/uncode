@@ -1,0 +1,85 @@
+:root {
+  /* Custom media rules */
+  @custom-media --mobile (width < 42rem);
+  @custom-media --tablet (width <=68rem);
+  @custom-media --desktop (width > 68rem);
+
+  /* Base Colors */
+
+  --cobalt: #1f3c8a;
+  --cerise: #d4055f;
+  --sickly-green: #94bb29;
+  --topaz: #32cac7;
+  --pale-olive: #d3eb9d;
+  --blue-green: #00a69c;
+  --terracotta: #f3835d;
+  --pale: #f3f0cd;
+  --black: #000;
+  --silver: #a6a8ab;
+  --medium-grey: #717171;
+  --grey-pale: #f9f9f9;
+  --silver-pale: #dedede;
+  --sunflower: #ffc700;
+  --white: #fff;
+  --white-lighter: #fdfdfd;
+  --dark-grey: #3e3e3e;
+  --light-grey: #e2e2e2;
+  --lighter-grey: #e9ecef;
+  --grey-500: #a6a8ab;
+
+  /* Base Colors Feedback */
+
+  /* Alert colors */
+  --color-success: var(--sickly-green);
+  --color-warning: var(--sunflower);
+  --color-error: var(--cerise);
+
+  /* Colors definitions */
+  --color-primary: var(--cobalt);
+  --color-accent: var(--cerise);
+  --color-third: var(--sunflower);
+  --color-fourth: var(--sickly-green);
+  --color-background: var(--white);
+  --color-background-dark: var(--dark-grey);
+  --color-text: var(--black);
+  --color-text-white: var(--white);
+  --color-text-light: var(--white-lighter);
+  --color-text-grey: var(--medium-grey);
+  --color-text-dark: var(--dark-grey);
+  --color-text-disabled: var(--silver);
+  --color-light: var(--white-lighter);
+  --color-lighter: var(--silver);
+  --color-dark: var(--dark-grey);
+  --color-disabled: var(--silver-pale);
+  --color-active: var(--color-primary);
+  --color-outline: currentcolor;
+
+  /* Font sizes */
+  --font-base: 16px;
+  --font-tiny: 0.625rem;
+  --font-sm: 0.875rem;
+  --font-normal: var(--font-base);
+  --font-m: 1.125rem; /* 18px */
+  --font-l: 1.25rem; /* 20px */
+  --font-xl: 1.5rem; /* 24px */
+  --headline-xxs: 1.25rem; /* 20px */
+  --headline-xs: 1.5rem; /* 24px */
+  --headline-s: 1.75rem; /* 28px */
+  --headline-m: 2rem; /* 32px */
+  --headline-l: 2.5rem; /* 40px */
+  --headline-xl: 3.5rem; /* 56px */
+  --headline-xxl: 4rem; /* 64px */
+
+  /* Font families */
+  --font-primary: "Lato";
+  --font-secondary: "Paytone One";
+
+  /* Z Index */
+  --z-n1: -1;
+  --z-n2: -2;
+  --z-0: 0;
+  --z-1: 10;
+  --z-2: 20;
+  --z-3: 30;
+  --z-4: 40;
+}

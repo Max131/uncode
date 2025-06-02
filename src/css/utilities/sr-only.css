@@ -1,0 +1,7 @@
+.sr-only {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+}

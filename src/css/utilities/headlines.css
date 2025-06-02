@@ -1,0 +1,77 @@
+/* Headlines/Titles */
+
+:is(
+  .title-xxl,
+  .title-xl,
+  .title-l,
+  .title-m,
+  .title-s,
+  .title-xs,
+  .title-xs-500
+) {
+  font-family: var(--font-secondary), sans-serif;
+}
+
+.title-xxl {
+  font-size: var(--headline-xxl);
+}
+
+.title-xl {
+  font-size: clamp(var(--font-m), var(--font-m) + 2.5vw, var(--headline-xl));
+  line-height: 1.1;
+  text-wrap: balance;
+
+  &:has(+ .subtitle) {
+    margin-bottom: 0;
+  }
+
+  & + .subtitle {
+    font-size: var(--font-xl);
+    margin-block: 0 1.5rem;
+  }
+
+  /* @media (--mobile) {
+      font-size: var(--font-m);
+    } */
+}
+
+.title-l {
+  font-size: clamp(var(--font-m), var(--font-m) + 2.25vw, var(--headline-l));
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.title-second-l {
+  font-family: var(--font-primary);
+  font-size: clamp(var(--font-m), var(--font-m) + 2.25vw, var(--headline-l));
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.title-l-bold {
+  font-size: clamp(var(--font-m), var(--font-m) + 2.25vw, var(--headline-l));
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.title-m {
+  font-size: var(--headline-m);
+
+  /* @media (--mobile) {
+      font-size: var(--font-l);
+    } */
+}
+
+.title-s {
+  font-size: var(--headline-s);
+}
+
+.title-xs {
+  font-size: var(--headline-xs);
+}
+
+.title-xs-500 {
+  font-size: var(--headline-xs);
+  font-weight: 500;
+}

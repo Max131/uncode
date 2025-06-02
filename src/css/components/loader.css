@@ -1,0 +1,10 @@
+.loader {
+  width: var(--loader-size, 3rem);
+  height: var(--loader-size, 3rem);
+  border: var(--loader-width, 0.5em) solid
+    var(--color-loader, var(--color-primary, dodgerblue));
+  border-radius: 50%;
+  border-right-color: transparent;
+  margin: 2rem auto;
+  animation: spin var(--loader-time, 0.8s) infinite linear;
+}

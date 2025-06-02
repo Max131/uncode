@@ -1,0 +1,21 @@
+include mixins/index
+block vars
+doctype
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    title  #{title? `${title} | `: ''} Layout Flow
+    link(rel='shortcut icon', href='images/logo.webp')
+    link(rel='apple-touch-icon', href='images/logo.webp')
+    link(rel='stylesheet', href='style.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='theme-color', content='#D4055F')
+    meta(name="description", content="Mercados por un futuro sostenible")
+
+  include parts/header
+
+  body(class=classes)
+    main
+      block content
+
+include parts/footer

@@ -1,0 +1,282 @@
+.button {
+  --button-text-color: var(--color-text-light);
+  --button-paddings: 1em 1.125em;
+  --button-background: var(--color-primary);
+  --button-font-size: var(--font-normal);
+  --button-border-radius: 3px;
+  --button-active-transparency: 30%;
+  --button-icon-size: 1.5cap;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-paddings);
+  border: 2px solid var(--button-border-color, transparent);
+  border-radius: var(--button-border-radius, 0);
+  background-color: var(--button-background, transparent);
+  color: var(--button-text-color, currentColor);
+  cursor: pointer;
+  font-family: var(--button-font, inherit);
+  font-size: var(--button-font-size, inherit);
+  font-weight: 600;
+  gap: 0.5rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: box-shadow var(--transition-timing, 300ms);
+
+  img {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+    object-fit: contain;
+  }
+
+  &.is-outlined {
+    --button-background: none;
+    --button-border-color: var(--color-primary);
+    --button-text-color: var(--color-primary);
+
+    &:is(:focus, :focus-visible) {
+      outline: 2px solid var(--button-border-color);
+      outline-offset: 2px;
+    }
+  }
+
+  &.is-secondary {
+    --button-background: var(--color-background);
+    --button-text-color: var(--color-accent);
+    --button-border-color: var(--color-background);
+  }
+
+  &.is-fourth {
+    --button-background: var(--color-fourth);
+    --button-text-color: var(--white);
+    --button-border-color: var(--color-fourth);
+  }
+
+  &.is-white {
+    --button-background: var(--white);
+    --button-text-color: var(--color-text);
+    --button-border-color: var(--white);
+  }
+
+  &.is-current {
+    --button-background: var(--light-grey);
+    --button-text-color: var(--color-text);
+    --button-border-color: var(--light-grey);
+  }
+
+  &.is-large {
+    --button-paddings: 1em 4em;
+
+    width: auto;
+
+    @media (--mobile) {
+      --button-paddings: 1em 2em;
+    }
+  }
+
+  &.is-success {
+    --button-background: var(--color-success);
+    --button-text-color: var(--color-text);
+  }
+
+  &.is-danger {
+    --button-background: var(--color-error);
+    --button-text-color: var(--color-text-light);
+  }
+
+  &.is-small {
+    --button-paddings: 0.5em 0.75em;
+    --button-font-size: var(--font-sm);
+  }
+
+  &.is-fullwidth {
+    width: 100%;
+  }
+
+  &.is-loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+
+    &::after {
+      position: absolute;
+      display: block;
+      height: 60%;
+      border: 0.25rem solid var(--button-background);
+      border-radius: 50%;
+      border-right-color: transparent;
+      animation: spin 0.75s linear infinite;
+      aspect-ratio: 1;
+      content: "";
+      mix-blend-mode: difference;
+      opacity: 0.5;
+    }
+  }
+
+  &.is-step {
+    --button-paddings: 1.25em 1.125em;
+    --button-border-color: var(--color-text-disabled);
+    --button-text-color: var(--color-text-disabled);
+    --button-icon-size: 2cap;
+
+    position: relative;
+    max-width: 100%;
+    justify-content: flex-start;
+    text-align: initial;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: 100%;
+        left: 1rem;
+        height: 1.5rem;
+        border-left: 3px dashed var(--color-text-disabled);
+        content: "";
+      }
+    }
+
+    &:is(:focus-within, :focus) {
+      outline: 0;
+    }
+
+    .step-icon {
+      flex-shrink: 0;
+    }
+
+    .button-step-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .button-step-description {
+      font-size: var(--font-tiny);
+    }
+
+    &.is-current {
+      --button-border-color: var(--color-accent);
+      --button-text-color: var(--color-accent);
+      --button-background: color-mix(
+        in srgb,
+        var(--color-accent),
+        transparent 90%
+      );
+    }
+
+    &.is-filled {
+      --button-border-color: var(--color-primary);
+      --button-text-color: var(--color-primary);
+      --button-background: color-mix(
+        in srgb,
+        var(--color-primary),
+        transparent 90%
+      );
+    }
+  }
+
+  &.is-file {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    word-wrap: anywhere;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px -8px
+      color-mix(in srgb, var(--color-dark), transparent 50%);
+  }
+
+  &:is(:focus, :active, .is-selected) {
+    outline: 2px solid
+      var(--button-background, var(--button-outline-color, currentcolor));
+    outline-offset: 0.125rem;
+  }
+
+  &[disabled],
+  &.is-disabled {
+    --button-background: var(--color-disabled);
+    --button-text-color: var(--color-text-disabled);
+
+    cursor: not-allowed;
+    outline: none;
+    pointer-events: none;
+  }
+}
+
+.button-is-text {
+  color: var(--color-fourth);
+  font-size: var(--font-normal);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button-is-icon {
+  --button-icon-size: 2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 4px solid var(--black);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  aspect-ratio: 1;
+  background: var(--color-background);
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow var(--transition-timing, 300ms);
+
+  img {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+    object-fit: contain;
+  }
+
+  &:is(:focus-within, :focus) {
+    outline: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px -8px
+      color-mix(in srgb, var(--color-dark), transparent 50%);
+  }
+}
+
+.button-is-area {
+  --button-icon-size: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  background: none;
+  cursor: pointer;
+  font-size: var(--font-sm);
+  gap: 0.3rem;
+  text-decoration: none;
+  transition: box-shadow var(--transition-timing, 300ms);
+
+  img {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+    object-fit: contain;
+  }
+
+  &:is(:focus-within, :focus) {
+    outline: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px -8px
+      color-mix(in srgb, var(--color-dark), transparent 50%);
+  }
+}

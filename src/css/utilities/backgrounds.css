@@ -1,0 +1,30 @@
+.has-background-primary {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.has-background-accent {
+  background: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+.has-background-third {
+  background: var(--color-third);
+  color: var(--color-text);
+}
+
+.has-background-grey-500 {
+  background: var(--grey-500);
+}
+
+.has-background-lighter-grey {
+  background: var(--lighter-grey);
+}
+
+.has-background-white {
+  background: var(--color-background);
+}
+
+.has-background-texture {
+  background: url("images/bg_paisajes.jpg") no-repeat center/cover;
+}

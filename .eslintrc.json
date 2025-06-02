@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "semistandard",
+    "prettier"
+  ],
+  "rules": {
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "always"
+    ]
+  },
+  "globals": {
+    "Alpine": "readonly",
+    "Quill": "readonly",
+    "DataTransfer": "readonly"
+  }
+}

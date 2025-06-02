@@ -1,0 +1,5 @@
+mixin modalFullImage({name="modal", titleClass="has-text-success"})
+  dialog.modal.is-full-image(data-modal-name=name)
+    button.modal-close(type="button", aria-label="Cerrar modal") &times;
+    .modal-container
+      block

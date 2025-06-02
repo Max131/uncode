@@ -1,0 +1,5 @@
+@media (--desktop) {
+  .is-hidden-desktop {
+    display: none;
+  }
+}

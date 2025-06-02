@@ -1,0 +1,5 @@
+@layer utils {
+  .is-rounded {
+    border-radius: 1rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "arrowParens": "always",
+        "bracketSameLine": true,
+        "bracketSpacing": true,
+        "semi": true,
+        "singleQuote": false,
+        "jsxSingleQuote": false,
+        "quoteProps": "as-needed",
+        "trailingComma": "all",
+        "singleAttributePerLine": false,
+        "htmlWhitespaceSensitivity": "ignore",
+        "htmlVoidTags": false,
+        "vueIndentScriptAndStyle": false,
+        "proseWrap": "preserve",
+        "insertPragma": false,
+        "printWidth": 80,
+        "requirePragma": false,
+        "tabWidth": 2,
+        "useTabs": false,
+        "embeddedLanguageFormatting": "auto"
+      }
+    }
+  ]
+}

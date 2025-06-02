@@ -1,0 +1,59 @@
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Lato'),
+    url('fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Lato'),
+    url('fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Lato'),
+    url('fonts/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    local('Lato'),
+    url('fonts/Lato-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Krana Alliance Fat';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Krana Alliance Fat'),
+    url('fonts/KranaAlliance-Fat.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Paytone One';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Paytone One'),
+    url('fonts/PaytoneOne-Regular.ttf') format('truetype');
+}

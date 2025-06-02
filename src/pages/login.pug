@@ -1,0 +1,36 @@
+extends ../templates/default
+block vars
+ - title = "Login"
+ - classes = "login"
+block content
+  .container
+    form.login-form.container.mt-4
+      img.login-logo(src="images/logo-small.png", alt="")
+      h1.title-l.has-text-accent.has-text-centered.is-uppercase Inicia sesión
+      .field
+        label(for="user") Nombre de usuario
+        input(type="text",id="user", name="user", , placeholder="Juan Pérez")
+
+      .field(x-data="inputPassword")
+        label(for="password") Contraseña
+        .input-container
+          input(:type="showPassword? 'text': 'password'", id="password", name="password", , minlength="1", placeholder="password")
+          button(type="button", x-bind="toggle", :aria-label="showPassword? 'Ocultar contraseña':'Mostrar contraseña'")
+            img(src="images/icons/eye.svg", alt="")
+
+      .field.in-row.space-between
+        label
+          input(type="checkbox", name="remember") 
+          | Recordar contraseña
+
+        a(href="#!") Olvidé mi contraseña
+
+      button.button Iniciar sesión
+
+      hr.or-bar(data-or-text="¿No te has registrado aún?")
+
+      p.has-text-centered #[a.modal-continue-button(href="/registro.html") Crea una cuenta] usando tu correo electrónico
+
+      img.login-banner.is-fullwidth(src="images/login-banner.png", alt="")
+
+
