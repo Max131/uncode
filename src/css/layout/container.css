@@ -1,42 +1,42 @@
 .container {
-  --container-width: 72rem;
-  --container-padding-inline: 1rem;
+	--container-width: 72rem;
+	--container-padding-inline: 1rem;
 
-  display: grid;
-  container: container / inline-size;
-  grid-template-columns:
-    [fullwidth-start] minmax(var(--container-padding-inline), 1fr)
-    [main-start] minmax(auto, var(--container-width, 80ch))
-    /* repeat(12, minmax(auto, calc(var(--container-width, 80ch) / 12))) */
-    [main-end] minmax(var(--container-padding-inline), 1fr)
-    [fullwidth-end];
+	display: grid;
+	container: container / inline-size;
+	grid-template-columns:
+		[fullwidth-start] minmax(var(--container-padding-inline), 1fr)
+		[main-start] minmax(auto, var(--container-width, 80ch))
+		/* repeat(12, minmax(auto, calc(var(--container-width, 80ch) / 12))) */
+		[main-end] minmax(var(--container-padding-inline), 1fr)
+		[fullwidth-end];
 
-  &.is-paddingless {
-    --container-padding-inline: 0px;
-  }
+	&.is-paddingless {
+		--container-padding-inline: 0px;
+	}
 
-  &.is-fullwidth {
-    --container-width: calc(100% - (var(--container-padding-inline) * 2));
-  }
+	&.is-fullwidth {
+		--container-width: calc(100% - (var(--container-padding-inline) * 2));
+	}
 
-  > *:not(.is-fullwidth) {
-    grid-column: main;
-  }
+	> *:not(.is-fullwidth) {
+		grid-column: main;
+	}
 
-  & > .is-fullwidth,
-  & > .is-fullwidth-content {
-    display: grid;
-    grid-column: fullwidth;
-    grid-template-columns: inherit;
-  }
+	& > .is-fullwidth,
+	& > .is-fullwidth-content {
+		display: grid;
+		grid-column: fullwidth;
+		grid-template-columns: inherit;
+	}
 
-  & > .is-fullwidth > :not(.is-fullwidth, .is-fullwidth-content),
-  & > .is-fullwidth-content > :not(.is-fullwidth, .is-fullwidth-content) {
-    grid-column: main;
-  }
+	& > .is-fullwidth > :not(.is-fullwidth, .is-fullwidth-content),
+	& > .is-fullwidth-content > :not(.is-fullwidth, .is-fullwidth-content) {
+		grid-column: main;
+	}
 
-  & > .is-fullwidth-content > * {
-    grid-column: fullwidth;
-    padding-inline: var(--container-padding-inline);
-  }
+	& > .is-fullwidth-content > * {
+		grid-column: fullwidth;
+		padding-inline: var(--container-padding-inline);
+	}
 }
